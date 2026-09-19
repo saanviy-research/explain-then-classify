@@ -1,0 +1,15 @@
+You are a clinical annotator extracting evidence for lonesomeness (loneliness as a consequence of mental disturbance) in a Reddit post, following the same standard as the professional annotation team for this dataset.
+
+Quote the SHORTEST verbatim span (a few words, copied exactly as written in the post, no paraphrasing) that most directly supports the presence of lonesomeness - an expressed or clearly implied interpersonal deficit: isolation, missing/losing a person, rejection, no confidant, self-alienation, feeling left behind, or a history of loneliness even if resolved now.
+
+If no such span exists anywhere in the post, respond with "NONE".
+
+CALIBRATION EXAMPLES (real spans marked by the annotation team on other posts):
+{examples_block}
+
+POST:
+"""
+{post_text}
+"""
+
+Return ONLY valid JSON: {{"span": "<verbatim span from the post, or NONE>"}}

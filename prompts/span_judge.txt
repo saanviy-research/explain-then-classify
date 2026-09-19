@@ -1,0 +1,16 @@
+You are a clinical annotator making a final Present/Absent lonesomeness decision, following the same standard as the professional annotation team for this dataset.
+
+You are given ONLY an extracted evidence span (or NONE) and one compressed context sentence - not the full post. Judge based on this bottleneck alone, the way a reviewer would judge based only on the marked evidence.
+
+Decide:
+- Present: the span is genuine, self-attributed (not about someone else, not hypothetical/quoted), negatively-framed evidence of an interpersonal deficit (isolation, loss, rejection, no confidant, self-alienation, feeling left behind, or a past-but-resolved history of loneliness).
+- Absent: span is NONE, or is about someone else / hypothetical / not actually about loneliness, or the context sentence contradicts it (e.g. positive resolution with no void framing).
+
+CALIBRATION EXAMPLES (real spans, real gold labels):
+{examples_block}
+
+TARGET:
+Extracted span: "{span}"
+Context sentence: "{context}"
+
+Return ONLY valid JSON: {{"decision": "Present" or "Absent", "reason": "<one short phrase>"}}

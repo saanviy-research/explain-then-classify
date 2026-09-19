@@ -1,0 +1,9 @@
+.env
+__pycache__/
+*.pyc
+venv/
+.venv/
+.DS_Store
+
+# The LonXplain dataset is downloaded from the source on first run (see config.DATASET_URL)
+data/Lonesomenessdataset.csv
